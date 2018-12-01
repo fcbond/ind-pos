@@ -154,17 +154,17 @@ Citations
 
 .. [UI_CORPUS]
 Arawinda Dinakaramani, Fam Rashel, Andry Luthfi, and Ruli Manurung.
-Designing an Indonesian Part of speech Tagset and Manually Tagged 
-Indonesian Corpus. International Conference on Asian Language 
-Processing (IALP 2014).
+`Designing an Indonesian Part of speech Tagset and Manually Tagged 
+Indonesian Corpus <https://ieeexplore.ieee.org/document/6973519>`_.
+International Conference on Asian Language Processing (IALP 2014).
 
 .. [NLTK]
 Steven Bird, Ewan Klein, and Edward Loper (2018)
 `Natural Language Processing with Python
 – Analyzing Text with the Natural Language Toolkit <https://www.nltk.org/book/>`_
-(update online version)
+(online version)
 
 .. [WN_BAHASA]
 Francis Bond, Lian Tze Lim, Enya Kong Tang and Hammam Riza (2014)
-`The combined Wordnet Bahasa <http://repository.tufs.ac.jp/bitstream/10108/79286/1/5_Bond_et_al.pdf>`_
+`The combined Wordnet Bahasa <http://repository.tufs.ac.jp/bitstream/10108/79286/2/nusa5705.pdf>`_
 NUSA: Linguistic studies of languages in and around Indonesia 57: pp 83–100 (URI: http://repository.tufs.ac.jp/handle/10108/79286)

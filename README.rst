@@ -1,25 +1,23 @@
 Indonesian Part of Speech Tagger and Tokenizer
 ==============================================
 
-Based on tagged text from UI:
-http://bahasa.cs.ui.ac.id/postag/corpus
-
-And using the frameworks from NLTK.
+Based on tagged text from UI, and and using the frameworks from NLTK [NLTK]_.
 
 Tokenization
 ------------
 
-* use the default nltk tagger with some fixes
+* use the default NLTK tagger with some fixes
 * remove clitics if it leaves you with a word
-** prefixes se|ku|kau
-** suffixes ku|mu|nya and lah|kah
-* the wordlist is from the Wordnet Bahasa
+ * prefixes se|ku|kau
+ * suffixes ku|mu|nya and lah|kah
+* the wordlist is from the Wordnet Bahasa [WN_BAHASA]_
 
 
 Part-of-speech tagging
 ----------------------
 
-* use NLTK's perceptron tagger trained on the UI corpus
+* use NLTK's perceptron tagger trained on the UI corpus [UI_CORPUS]_
+  http://bahasa.cs.ui.ac.id/postag/corpus
 
 
 Lemmatization
@@ -27,11 +25,11 @@ Lemmatization
 
 Not done yet! Should work with Hiroki
 
- * deduplicate  X-X ->X pos2 if not in WN
- * strip superlative
- ** te+adj -> ter- | adj (if adj in WN)
- ** ter+adj -> ter- |adj (if adj in WN)
- * diX -> di- + X if not in wn
+* deduplicate  X-X ->X pos2 if not in WN
+* strip superlative
+ * te+adj -> ter- | adj (if adj in WN)
+ * ter+adj -> ter- |adj (if adj in WN)
+* diX -> di- + X if not in wn
 
 
 Training and Setup
@@ -46,11 +44,6 @@ https://github.com/famrashel/idn-tagged-corpus
 Tagset:
 http://bahasa.cs.ui.ac.id/postag/downloads/Tagset.pdf
 
-Citation:
-Arawinda Dinakaramani, Fam Rashel, Andry Luthfi, and Ruli Manurung.
-Designing an Indonesian Part of speech Tagset and Manually Tagged 
-Indonesian Corpus. International Conference on Asian Language 
-Processing (IALP 2014). 
 
 http://bahasa.cs.ui.ac.id/postag/downloads/Designing%20an%20Indonesian%20Part%20of%20speech%20Tagset.pdf
 
@@ -154,3 +147,24 @@ dup = re.compile(r'^(.*)-\1$')
                     lemma = d.group(1)
 
 ```
+
+
+Citations
+---------
+
+.. [UI_CORPUS]
+Arawinda Dinakaramani, Fam Rashel, Andry Luthfi, and Ruli Manurung.
+Designing an Indonesian Part of speech Tagset and Manually Tagged 
+Indonesian Corpus. International Conference on Asian Language 
+Processing (IALP 2014).
+
+.. [NLTK]
+Steven Bird, Ewan Klein, and Edward Loper (2018)
+`Natural Language Processing with Python
+– Analyzing Text with the Natural Language Toolkit <https://www.nltk.org/book/>`_
+(update online version)
+
+.. [WN_BAHASA]
+Francis Bond, Lian Tze Lim, Enya Kong Tang and Hammam Riza (2014)
+`The combined Wordnet Bahasa <http://repository.tufs.ac.jp/bitstream/10108/79286/1/5_Bond_et_al.pdf>`_
+NUSA: Linguistic studies of languages in and around Indonesia 57: pp 83–100 (URI: http://repository.tufs.ac.jp/handle/10108/79286)

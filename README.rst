@@ -19,7 +19,10 @@ Part-of-speech tagging
 * use NLTK's perceptron tagger trained on the UI corpus [UI_CORPUS]_
   http://bahasa.cs.ui.ac.id/postag/corpus
 
+* the tokenizer and an example of calling the tagger and tokenizer is
+  given in `tag.py`
 
+  
 Lemmatization
 -------------
 

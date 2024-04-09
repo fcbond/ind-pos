@@ -81,23 +81,23 @@ punct=['•', '>', '/', '?', '!', '-', '–', '—', ';', ':',
 ```
 
 * Add mapping to UPOS
-```
-UPOS	Definition	Mapped POS
-ADJ	adjective	jj, jj2
-ADP	adposition	in
-ADV	adverb	prl, rb
-AUX	auxiliary verb	md
-CONJ	coordinating conjunction	cc
-NOUN	noun	nn, nn2, nnc, nnc2, nng, nnu
-NUM	numeral	cdc, cdi, cdo, cdp, prn
-PRON	pronoun	prp, wp, wp2
-PROPN	proper noun	nnp
-PRT	particle	neg, rp
-PUNCT	punctuation	pu!, pu", pu&, pu(, pu), pu,, pu-, pu., pu/, pu:, pu;, pu>, pu?, pu©, pu–, pu“, pu”, pu•
-SCONJ	subordinating conjunction	sc
-VERB	verb	vbi, vbt
-X	other	., dt, dt2, fw, nns2, wrb
-```
+.. code-block::
+
+  UPOS	Definition	Mapped POS
+  ADJ	adjective	jj, jj2
+  ADP	adposition	in
+  ADV	adverb	prl, rb
+  AUX	auxiliary verb	md
+  CONJ	coordinating conjunction	cc
+  NOUN	noun	nn, nn2, nnc, nnc2, nng, nnu
+  NUM	numeral	cdc, cdi, cdo, cdp, prn
+  PRON	pronoun	prp, wp, wp2
+  PROPN	proper noun	nnp
+  PRT	particle	neg, rp
+  PUNCT	punctuation	pu!, pu", pu&, pu(, pu), pu,, pu-, pu., pu/, pu:, pu;, pu>, pu?, pu©, pu–, pu“, pu”, pu•
+  SCONJ	subordinating conjunction	sc
+  VERB	verb	vbi, vbt
+  X	other	., dt, dt2, fw, nns2, wrb
 
 
 Maybe ToDo
@@ -111,13 +111,14 @@ After POS tagging, ...
 * Split ter/ber/di
 * Un-reduplicate
 
-``` python
-### Note, now use lex['adj'], lex['ber'], ...
+.. code-block:: python
 
-notber=['berdiri', 'belaja', 'bersama']
-dup = re.compile(r'^(.*)-\1$')
+  ### Note, now use lex['adj'], lex['ber'], ...
 
-## check for superlative te(r)-
+  notber=['berdiri', 'belaja', 'bersama']
+  dup = re.compile(r'^(.*)-\1$')
+
+  ## check for superlative te(r)-
             if lemma.startswith('ter'): # and lemma not in lexall:
                 if lemma[2:] in lexadj:
                     lemma = lemma[2:]
@@ -153,25 +154,22 @@ dup = re.compile(r'^(.*)-\1$')
                     pos = pos + "2"
                     lemma = d.group(1)
 
-```
+
 
 
 Citations
 ---------
 
-.. [UI_CORPUS]
-Arawinda Dinakaramani, Fam Rashel, Andry Luthfi, and Ruli Manurung.
-`Designing an Indonesian Part of speech Tagset and Manually Tagged 
-Indonesian Corpus <https://ieeexplore.ieee.org/document/6973519>`_.
-International Conference on Asian Language Processing (IALP 2014).
+.. [UI_CORPUS] Arawinda Dinakaramani, Fam Rashel, Andry Luthfi, and Ruli Manurung. 
+  `Designing an Indonesian Part of speech Tagset and Manually Tagged 
+  Indonesian Corpus <https://ieeexplore.ieee.org/document/6973519>`_.
+  International Conference on Asian Language Processing (IALP 2014).
 
-.. [NLTK]
-Steven Bird, Ewan Klein, and Edward Loper (2018)
-`Natural Language Processing with Python
-– Analyzing Text with the Natural Language Toolkit <https://www.nltk.org/book/>`_
-(online version)
+.. [NLTK] Steven Bird, Ewan Klein, and Edward Loper (2018)
+  `Natural Language Processing with Python
+  – Analyzing Text with the Natural Language Toolkit <https://www.nltk.org/book/>`_
+  (online version)
 
-.. [WN_BAHASA]
-Francis Bond, Lian Tze Lim, Enya Kong Tang and Hammam Riza (2014)
-`The combined Wordnet Bahasa <http://repository.tufs.ac.jp/bitstream/10108/79286/2/nusa5705.pdf>`_
-NUSA: Linguistic studies of languages in and around Indonesia 57: pp 83–100 (URI: http://repository.tufs.ac.jp/handle/10108/79286)
+.. [WN_BAHASA] Francis Bond, Lian Tze Lim, Enya Kong Tang and Hammam Riza (2014)
+  `The combined Wordnet Bahasa <http://repository.tufs.ac.jp/bitstream/10108/79286/2/nusa5705.pdf>`_
+  NUSA: Linguistic studies of languages in and around Indonesia 57: pp 83–100 (URI: http://repository.tufs.ac.jp/handle/10108/79286)
